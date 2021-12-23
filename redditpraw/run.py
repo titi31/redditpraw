@@ -13,6 +13,7 @@ home_dir_str = str( home_dir )
 configFile = Path.home().joinpath( 'dossierConfig', 'config.ini' )
 config = configparser.ConfigParser()
 config.read(configFile)
+listSaved = Path.home().joinpath('dossierConfig','listSaved.json')
 
 reddit = praw.Reddit(
    client_id=config['DEFAULT']['client_id'],
@@ -46,10 +47,11 @@ for item in savedcontent:
 
 pprint.pprint(listeDesDict)  
 
-with open('listSaved.json', 'w') as f:
+with open(listSaved, 'w') as f:
     data = f.write(json.dumps(listeDesDict,indent=4)
 )
     print(data)
+
 #print(list(savedcontent))
 
 
