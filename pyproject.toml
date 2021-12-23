@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "redpraw"
+version = "3"
+description = ""
+authors = ["laveritevraie <timothe.laude@protonmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+praw = "^7.5.0"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+my-script = "run:main"
